@@ -58,7 +58,7 @@ export default {
         })
 
         const createTodo = (todoTitle) => {
-            todoList.value.unshift({
+            todoList.value.push({
                 id: uid(),
                 todoTitle,
                 isCompleted: null,
