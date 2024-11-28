@@ -1,19 +1,38 @@
-# chapter_7_todo_app_vue
+# Vue Todo App
 
-## Project setup
-```
-npm install
-```
+This is a simple Todo application built with Vue.js. It allows users to add, edit, and delete tasks, helping them manage their daily activities efficiently.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Add new tasks
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/vue-todo-app.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd vue-todo-app
+   ```
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
+
+## Usage
+
+1. Start the development server:
+   ```sh
+   npm run serve
+   ```
+2. Open your browser and go to `http://localhost:8080` to see the app in action.
+
+## Acknowledgements
+
+- [Vue.js](https://vuejs.org/)
+- [Vue CLI](https://cli.vuejs.org/)
