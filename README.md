@@ -2,6 +2,10 @@
 
 This is a simple Todo application built with Vue.js. It allows users to add, edit, and delete tasks, helping them manage their daily activities efficiently.
 
+## Demo
+
+You can view a live demo of the project [here](https://vue-todo-web-app.vercel.app/).
+
 ## Features
 
 - Add new tasks
