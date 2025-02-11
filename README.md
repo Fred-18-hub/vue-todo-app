@@ -13,7 +13,7 @@ This is a simple Todo application built with Vue.js. It allows users to add, edi
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/vue-todo-app.git
+   git clone https://github.com/fred-18-hub/vue-todo-app.git
    ```
 2. Navigate to the project directory:
    ```sh
