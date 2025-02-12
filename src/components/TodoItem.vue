@@ -2,9 +2,10 @@
     <li>
         <input type="checkbox" :checked="todo.isCompleted" @input="$emit('toggle-completed', index)">
         <div class="todo">
-            <input  v-if="todo.isEditing" type="text" :value="todo.todoTitle"
+            <input v-if="todo.isEditing" type="text" :value="todo.todoTitle"
                 @input="$emit('update-todo', $event.target.value, index)" />
-            <span v-else :class="{ 'todo-completed': todo.isCompleted }">#{{ ++index }}. {{ todo.todoTitle }}</span>
+            <span v-else :class="{ 'todo-completed': todo.isCompleted }">#{{ counter }}. {{ todo.todoTitle
+                }}</span>
         </div>
         <div class="todo-actions">
             <Icon v-if="todo.isEditing" icon="lets-icons:check-fill" class="icon" width="22" height="22"
@@ -22,7 +23,12 @@ import { Icon } from '@iconify/vue';
 
 export default {
     props: ["todo", "index"],
-    components: { Icon }
+    components: { Icon },
+    setup(props) {
+        const counter = props.index + 1;
+
+        return { counter };
+    }
 }
 </script>
 
@@ -49,10 +55,15 @@ li {
         background-color: #fff;
         border-radius: 50%;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        cursor: pointer;
 
         &:checked {
             background-color: #41b080;
         }
+    }
+
+    input[type="checkbox"]:hover {
+        background-color: #41b080;
     }
 
     .todo {
