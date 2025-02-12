@@ -62,10 +62,6 @@ li {
         }
     }
 
-    input[type="checkbox"]:hover {
-        background-color: #41b080;
-    }
-
     .todo {
         flex: 1;
 
