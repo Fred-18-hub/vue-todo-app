@@ -24,7 +24,7 @@ export default {
             todoState.invalid = false
             if (ev.type === "click" || (ev.type === "keyup" && ev.key == "Enter")) {
                 if (todoState.todoTitle.trim() !== "") {
-                    emit("create-todo", todoState.todoTitle.trim())
+                    emit("createTodo", todoState.todoTitle.trim())
                     todoState.todoTitle = ""
                     return
                 }
@@ -60,6 +60,11 @@ export default {
         padding: 8px 16px;
         border: none;
         width: 80px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: rgb(220, 220, 220);
     }
 
     input {

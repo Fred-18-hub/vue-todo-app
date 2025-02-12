@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Create Todo</h1>
-        <TodoCreator @create-todo="createTodo" />
+        <TodoCreator @createTodo="createTodo" />
         <ul v-if="todoList.length" class="todo-list">
             <TodoItem v-for="(todo, indx) in todoList" :key="todo.id" :todo="todo" :index="indx"
                 @toggle-completed="toggleCompleted" @toggle-editing="toggleEditing" @update-todo="updateTodo"
@@ -79,7 +79,10 @@ export default {
         }
 
         const deleteTodo = (todoId) => {
-            todoList.value = todoList.value.filter(todo => todo.id !== todoId)
+            const confirmedDelete = confirm("Do you want to delete item?");
+            if (confirmedDelete) {
+                todoList.value = todoList.value.filter(todo => todo.id !== todoId)
+            }
         }
 
         return { createTodo, todoList, toggleCompleted, toggleEditing, updateTodo, deleteTodo, todosCompleted }
